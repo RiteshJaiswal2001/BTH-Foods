@@ -1,16 +1,28 @@
-# React + Vite
+# 🌶️ BTH Foods – Authentic Indian Spices Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**BTH Spices** is a modern, responsive web application built using **React** that showcases a range of authentic Indian spices with vibrant visuals, rich descriptions, and easy online ordering options through top e-commerce platforms like Amazon, Flipkart, and Blinkit.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- 🏠 **Interactive Homepage** – Clean layout with brand logo and smooth navigation.  
+- 🌿 **About Us Page** – Tells our story, heritage, and passion for authentic Indian spices.  
+- 📦 **Product Range Page** – Displays spice cards with images, details, and direct vendor links.  
+- 🛒 **Order Online Integration** – Click to reveal vendor popups for quick ordering.  
+- 📱 **Fully Responsive** – Works flawlessly on desktops, tablets, and mobile devices.  
+- 🎨 **Elegant Color Palette:**  
+  - Orange `#F4991A`  
+  - Dark Green `#344F1F`  
+  - Light Beige `#F2EAD3`  
+  - Cream `#F9F5F0`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧩 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React.js, React Router  
+- **Styling:** CSS3 (Custom styling using brand color palette)  
+- **Assets:** Local and optimized images for fast loading  
+
+---
