@@ -1,0 +1,197 @@
+/* HEADER STYLING (Dark theme matching footer) */
+.new-app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 25px; /* moderate padding */
+  background-color: #344f1f; /* Dark green */
+  color: #f9f5f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+  height: 70px; /* slightly taller for better proportion */
+}
+
+/* Logo */
+.app-logo img {
+  width: 85px; /* slightly larger */
+  border-radius: 50%;
+  margin-bottom: 0;
+}
+
+/* Hamburger Menu (mobile only) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #f9f5f0;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+/* Navigation Menu */
+.header-bottom-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header-bottom-nav a {
+  text-decoration: none;
+  color: #f9f5f0;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.header-bottom-nav a:hover {
+  color: #f4991a;
+  background-color: rgba(244, 153, 26, 0.1);
+}
+
+/* Distinct Order Button */
+.order-button {
+  background-color: #f4991a; /* Bright orange */
+  color: #344f1f; /* Dark text */
+  border: none;
+  padding: 7.5px 15px; /* bigger for prominence */
+  border-radius: 6px; /* rounded but not pill-shaped */
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* subtle shadow for pop */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.order-button:hover {
+  background-color: #e08c16; /* slightly darker orange */
+  transform: translateY(-2px); /* subtle lift effect */
+  color: #f9f5f0;
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN (Mobile) */
+/* ========================= */
+@media (max-width: 768px) {
+  .new-app-header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 15px;
+  }
+
+  .header-left {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-right {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #344f1f;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+    align-items: flex-start;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+
+  .header-right.menu-open {
+    display: flex;
+  }
+
+  .header-bottom-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .header-bottom-nav a,
+  .order-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* ========================= */
+/* ORDER BUTTON POPUP STYLING */
+/* ========================= */
+
+.order-container {
+  position: relative;
+}
+
+.header-vendors-popup {
+  position: absolute;
+  top: 120%; /* popup below the button */
+  right: 0; /* aligned to left side */
+  background-color: #f2ead3;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0.8rem;
+  z-index: 9999;
+  min-width: 260px;
+  animation: fadeIn 0.25s ease;
+}
+
+.vendor-grid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.vendor-grid a img {
+  width: 70px;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.vendor-grid a img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* For mobile view */
+@media (max-width: 768px) {
+  .header-vendors-popup {
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .vendor-grid a img {
+    width: 60px;
+  }
+}

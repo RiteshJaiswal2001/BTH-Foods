@@ -1,0 +1,5 @@
+body {
+  padding-top: 20px; /* Adjust this value to match your header's actual height */
+  /* You might also want to add: */
+  margin: 0; /* Remove default body margin */
+}

@@ -1,0 +1,141 @@
+.product-range-page {
+  background-color: #f9f5f0;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.page-title {
+  color: #344f1f;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-img {
+  background-color: #f2ead3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.product-img img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
+.product-info {
+  padding: 1.5rem;
+  color: #344f1f;
+}
+
+.product-info h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #344f1f;
+}
+
+.product-info .hindi {
+  color: #f4991a;
+  font-size: 1.1rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.sizes {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.order-section {
+  position: relative;
+  display: inline-block;
+}
+
+.order-btn {
+  background-color: #f4991a;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.order-btn:hover {
+  background-color: #344f1f;
+}
+
+.vendors-popup {
+  position: absolute;
+  bottom: 110%;
+  left: 0;
+  background-color: #f2ead3;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0.8rem;
+  z-index: 10;
+  min-width: 260px;
+}
+
+.vendor-grid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.vendor-grid a img {
+  width: 70px;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.vendor-grid a img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-info {
+    text-align: center;
+  }
+
+  .vendors-popup {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .vendor-grid a img {
+    width: 60px;
+  }
+}

@@ -1,0 +1,104 @@
+/* PosterSlider.css */
+
+/*
+  Color Palette:
+  - Orange: #F4991A
+  - Dark Green: #344F1F
+  - Light Beige: #F2EAD3
+  - Very Light Cream: #F9F5F0
+*/
+
+.poster-slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: #f2ead3;
+
+  /* --- ADJUSTMENT FOR 75px HEADER --- */
+  /* We calculate the height of the viewport (100vh) and subtract the header height. */
+  height: calc(100vh - 75px);
+
+  /* Setting a max-height is good practice to avoid overly large sliders on tall screens */
+  max-height: 800px;
+}
+
+.poster-slider {
+  display: flex;
+  width: 100%;
+  height: 100%; /* This will now be 100% of the calculated container height */
+}
+
+.poster-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.poster-slide.active {
+  opacity: 1;
+}
+
+.slider-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #f9f5f0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid #344f1f;
+}
+
+.indicator.active {
+  background-color: #f4991a;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+/* For mobile devices, the header might have a different height, or you might want a different layout.
+   Let's assume the header is still 75px on mobile for this example. */
+@media (max-width: 768px) {
+  .poster-slider-container {
+    /* Recalculate for mobile, or set a different height if you prefer */
+    height: calc(100vh - 75px);
+
+    /* On mobile, it's often better to not let the slider take the full remaining height.
+       Let's cap it or use a different unit. A 50vh or a fixed pixel height often works better.
+       I'm commenting out the calc() and using a more mobile-friendly height below. */
+    height: 50vh;
+    border-radius: 0; /* Full width on mobile often looks better without rounded corners */
+  }
+
+  .slider-indicators {
+    bottom: 10px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .poster-slider-container {
+    height: 45vh; /* Even smaller height for small phones */
+  }
+}
