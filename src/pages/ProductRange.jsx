@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import "../styling/ProductRange.css";
 
 // Images
-import redChilliImg from "../assets/jeera.jpeg";
+import redChilliImg from "../assets/Jeera.jpeg";
 import turmericImg from "../assets/turmeric.jpeg";
 import corianderImg from "../assets/coriander.jpeg";
 import garamMasalaImg from "../assets/GaramMasala.jpeg"
 import kaliMirchImg from "../assets/kaliMirch.jpeg"
-import mixMasalaImg from "../assets/mixMasala2.jpeg"
+import mixMasalaImg from "../assets/MixMasala2.jpeg"
 import amazonLogo from "../assets/amazon.jpg";
 import blinkitLogo from "../assets/Blinkit.png";
 import flipkartLogo from "../assets/flipkart.jpg";
