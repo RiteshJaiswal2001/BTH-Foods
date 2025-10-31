@@ -11,7 +11,7 @@ import mixMasalaImg from "../assets/MixMasala2.jpeg"
 import amazonLogo from "../assets/amazon.jpg";
 import blinkitLogo from "../assets/Blinkit.png";
 import flipkartLogo from "../assets/flipkart.jpg";
-
+ 
 const products = [
   {
     id: 1,
