@@ -26,8 +26,3 @@
 - **Assets:** Local and optimized images for fast loading  
 
 ---
-
-
-
-# Start the development server
-npm start
