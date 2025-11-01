@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "../styling/Header.css";
 import Bthlogo from "../assets/BthLogo.jpeg";
@@ -11,6 +11,7 @@ import flipkartLogo from "../assets/flipkart.jpg";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVendorOpen, setIsVendorOpen] = useState(false);
+  const vendorPopupRef = useRef(null); // ✅ reference for popup container
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -19,6 +20,37 @@ const Header = () => {
   const toggleVendors = () => {
     setIsVendorOpen(!isVendorOpen);
   };
+
+  // ✅ Close menu + vendor popup + scroll to top
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+    setIsVendorOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // ✅ Detect clicks outside vendor popup
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        vendorPopupRef.current &&
+        !vendorPopupRef.current.contains(event.target)
+      ) {
+        setIsVendorOpen(false);
+      }
+    };
+
+    // Attach listener only when popup is open
+    if (isVendorOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    // Cleanup
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isVendorOpen]);
 
   const vendorLinks = [
     { id: "amazon", img: amazonLogo, url: "https://www.amazon.in/" },
@@ -43,18 +75,26 @@ const Header = () => {
         <nav className="header-bottom-nav">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" onClick={handleLinkClick}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/about-us">About Us</Link>
+              <Link to="/about-us" onClick={handleLinkClick}>
+                About Us
+              </Link>
             </li>
             <li>
-              <Link to="/product-range">Product Range</Link>
+              <Link to="/product-range" onClick={handleLinkClick}>
+                Product Range
+              </Link>
             </li>
             <li>
-              <Link to="/contact-us">Contact Us</Link>
+              <Link to="/contact-us" onClick={handleLinkClick}>
+                Contact Us
+              </Link>
             </li>
-            <li className="order-container">
+            <li className="order-container" ref={vendorPopupRef}>
               <button className="order-button" onClick={toggleVendors}>
                 Order Online ▾
               </button>
@@ -68,6 +108,7 @@ const Header = () => {
                         href={vendor.url}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={handleLinkClick}
                       >
                         <img src={vendor.img} alt={vendor.id} />
                       </a>

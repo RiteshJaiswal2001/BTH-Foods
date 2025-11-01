@@ -8,20 +8,20 @@ const ContactUs = () => {
         {/* Top Section */}
         <div className="contact-section top-section">
           <div className="contact-card main-details">
-            <h2>DS SPICECO PVT. LTD.</h2>
+            <h2>BTH Foods PVT. LTD.</h2>
             <p>
-              DS Headquarters, C, 6-10, Dharampal Satyapal (DS) Road,
+              Ganoli Road, Dharampur, Bettiah,845438,
               <br />
-              Sector - 67, Noida – 201309
+              Bihar,India
             </p>
             <div className="contact-info-item">
               <h3>Office</h3>
-              <p>0120-4032200</p>
+              <p>7992373158</p>
             </div>
             <div className="contact-info-item">
               <h3>Email</h3>
               <p>
-                <a href="mailto:foods@dsgroup.com">foods@dsgroup.com</a>
+                <a href="mailto:foods@dsgroup.com">info@bthfoods.com</a>
               </p>
             </div>
           </div>
@@ -29,7 +29,7 @@ const ContactUs = () => {
           <div className="contact-card side-details">
             <div className="contact-info-item">
               <h3>Consumer Care Helpline No.</h3>
-              <p>0120-4832860</p>
+              <p>8877990058</p>
             </div>
             <div className="contact-info-item">
               <h3>Google Map</h3>

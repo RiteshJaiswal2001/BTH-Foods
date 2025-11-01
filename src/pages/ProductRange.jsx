@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styling/ProductRange.css";
 
 // Images
-import redChilliImg from "../assets/Jeera.jpeg";
+import redChilliImg from "../assets/redChilli.webp";
 import turmericImg from "../assets/turmeric.jpeg";
 import corianderImg from "../assets/coriander.jpeg";
 import garamMasalaImg from "../assets/GaramMasala.jpeg"

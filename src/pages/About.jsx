@@ -6,6 +6,14 @@ import cooking from "../assets/cooking.jpg";
 import { Link } from "react-router-dom";
 
 const AboutUs = () => {
+  // ✅ Function to scroll smoothly to top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section className="about-container">
       <div className="about-hero">
@@ -70,7 +78,8 @@ const AboutUs = () => {
           voluptatum tenetur architecto enim ducimus provident aspernatur, rerum
           est soluta accusantium veritatis porro autem laborum nobis!
         </p>
-        <Link to="/product-range" className="order-spices-btn">
+        {/* ✅ Added scrollToTop here */}
+        <Link to="/product-range" onClick={scrollToTop} className="order-spices-btn">
           Order Your Spices
         </Link>
       </div>
