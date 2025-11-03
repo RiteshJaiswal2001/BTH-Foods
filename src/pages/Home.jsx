@@ -111,14 +111,14 @@ const Home = () => {
               “Absolutely love their turmeric! The freshness and aroma are unmatched. It truly
               elevates every dish.”
             </p>
-            <h4>– Priya Sharma</h4>
+            <h4>– Khusboo Devi</h4>
           </div>
           <div className="home-testimonial-card">
             <p>
               “BTH Spices deliver on their promise of purity. The packaging is great, and the flavor
               is authentic.”
             </p>
-            <h4>– Arjun Patel</h4>
+            <h4>– Raushan Hulchal</h4>
           </div>
         </div>
       </section>

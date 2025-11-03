@@ -1,88 +1,60 @@
-import React from 'react';
-import '../styling/ContactUs.css'; // Make sure the path to your CSS file is correct
+import React from "react";
+import "../styling/ContactUs.css";
 
 const ContactUs = () => {
   return (
     <div className="contact-us-page">
       <div className="contact-us-container">
-        {/* Top Section */}
-        <div className="contact-section top-section">
+        {/* --- Top Section --- */}
+        <div className="contact-section">
           <div className="contact-card main-details">
             <h2>BTH Foods PVT. LTD.</h2>
             <p>
-              Ganoli Road, Dharampur, Bettiah,845438,
+              Ganoli Road, Dharampur, Bettiah, 845438,
               <br />
-              Bihar,India
+              Bihar, India
             </p>
+
             <div className="contact-info-item">
               <h3>Office</h3>
-              <p>7992373158</p>
+              <p>8877990058</p>
             </div>
+
             <div className="contact-info-item">
               <h3>Email</h3>
               <p>
-                <a href="mailto:foods@dsgroup.com">info@bthfoods.com</a>
+                <a href="mailto:info@bthfoods.com">info@bthfoods.com</a>
               </p>
             </div>
           </div>
 
           <div className="contact-card side-details">
-            <div className="contact-info-item">
-              <h3>Consumer Care Helpline No.</h3>
-              <p>8877990058</p>
+            <div className="person-details">
+              <h3>Bulk Buy & Dealership</h3>
+              <p><strong>Helpline:</strong> 8877990058</p>
             </div>
-            <div className="contact-info-item">
-              <h3>Google Map</h3>
-              <a 
-                href="https://www.google.com/maps" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="map-link"
-              >
-                Click Here
-              </a>
+
+            <div className="person-details">
+              <h3>Whole Spices in Bulk</h3>
+              <p><strong>Helpline:</strong> 7992373158</p>
+              <p className="contact-note">
+                Drop a quick WhatsApp message — we’ll respond with the best quote for your order.
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="contact-section bottom-section">
-          <div className="contact-card person-details">
-            <h3>CPC</h3>
-            <div className="contact-info-item">
-              <h4>Helpline No.</h4>
-              <p>9717399616</p>
-            </div>
-            <div className="contact-info-item">
-              <h4>Email</h4>
-              <p>
-                <a href="mailto:chandra.srivastav@dsgroup.com">
-                  chandra.srivastav@dsgroup.com
-                </a>
-              </p>
-            </div>
-          </div>
-
-          <div className="contact-card person-details">
-            <h3>CSD</h3>
-            <div className="contact-info-item">
-              <h4>Helpline No.</h4>
-              <p>8800988225</p>
-            </div>
-            <div className="contact-info-item">
-              <h4>Email</h4>
-              <p>
-                <a href="mailto:ravi.upreti@dsgroup.com">
-                  ravi.upreti@dsgroup.com
-                </a>
-              </p>
-            </div>
-          </div>
-
-          <div className="contact-card action-card">
-            <button className="action-button">BULK BUY &gt;</button>
-            <button className="action-button">DEALERSHIP &gt;</button>
-            <p className="note">*Bulk order is equal to 10kg or more</p>
+        {/* --- Map Section --- */}
+        <div className="map-section">
+          <h2>Our Location</h2>
+          <div className="map-container">
+            <iframe
+              title="BTH Foods Location"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7121.902992704123!2d84.56418900000001!3d26.809673!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399369830331fa05%3A0xc85b67ce9537edcb!2sBth%20Foods%20%26%20Spices!5e0!3m2!1sen!2sin!4v1762160522365!5m2!1sen!2sin"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
